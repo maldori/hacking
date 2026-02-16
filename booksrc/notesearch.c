@@ -4,7 +4,7 @@
 #include <sys/stat.h>
 #include "hacking.h"
 
-#define FILENAME "/var/notes"
+#define FILENAME "./var/notes"
 
 int print_notes(int, int, char *);   // note printing function
 int find_user_note(int, int);        // seek in file for a note for user

@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include "hacking.h"
 
-#define DATAFILE "/var/chance.data" // File to store user data
+#define DATAFILE "./var/chance.data" // File to store user data
 
 // Custom user struct to store information about users
 struct user {

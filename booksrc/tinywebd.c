@@ -12,7 +12,7 @@
 
 #define PORT 80   // the port users will be connecting to 
 #define WEBROOT "./webroot" // the web server's root directory 
-#define LOGFILE "/var/log/tinywebd.log" // log filename 
+#define LOGFILE "./var/log/tinywebd.log" // log filename 
    
 int logfd, sockfd;  // global log and socket file descriptors 
 void handle_connection(int, struct sockaddr_in *, int); 

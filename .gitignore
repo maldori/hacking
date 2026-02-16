@@ -6,6 +6,7 @@ booksrc/*
 !booksrc/*.asm
 !booksrc/*.bin
 !booksrc/*.sh
+!booksrc/var/
 
 # Ignore object files
 *.o
