@@ -1,9 +1,22 @@
+#include <unistd.h>
 #include <stdio.h>
 #include <sys/stat.h>
 #include <ctype.h>
 #include <time.h>
 #include <stdlib.h>
 #include <string.h>
+
+char *strfry(char *string) {
+    if (!string || !*string) return string;
+    size_t len = strlen(string);
+    for (size_t i = 0; i < len - 1; i++) {
+        size_t j = i + rand() % (len - i);
+        char t = string[j];
+        string[j] = string[i];
+        string[i] = t;
+    }
+    return string;
+}
 
 #define CHR "%_01234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-"
 
@@ -21,7 +34,7 @@ int main(int argc, char* argv[])
    }
 
    srand(time(NULL));
-   bzero(mem, 70);
+   memset(mem, 0, 70);
    strcpy(mem, CHR);
    len = strlen(mem);
    strfry(mem); // randomize

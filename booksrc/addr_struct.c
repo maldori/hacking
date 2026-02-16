@@ -1,7 +1,10 @@
+#include <string.h>
+#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
+#include <arpa/inet.h>
 int main(int argc, char *argv[]) {
    struct sockaddr_in addr;
    if(argc != 3) {

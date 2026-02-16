@@ -1,9 +1,11 @@
+#include <string.h>
+#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 static void cleanup(void) __attribute__ ((destructor));
 
-main() {
+int main() {
    printf("Some actions happen in the main() function..\n");
    printf("and then when main() exits, the destructor is called..\n");
 

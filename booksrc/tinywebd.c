@@ -149,7 +149,7 @@ int get_file_size(int fd) {
 /* This function writes a timestamp string to the open file descriptor 
  * passed to it. 
  */ 
-void timestamp(fd) { 
+void timestamp(int fd) { 
    time_t now; 
    struct tm *time_struct; 
    int length; 

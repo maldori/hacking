@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 #include <libnet.h>
 #include <pcap.h>
 #include "hacking.h"

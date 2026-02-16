@@ -1,0 +1,14 @@
+# Ignore compiled binaries (files without extensions in booksrc)
+booksrc/*
+!booksrc/*.c
+!booksrc/*.h
+!booksrc/*.s
+!booksrc/*.asm
+!booksrc/*.bin
+!booksrc/*.sh
+
+# Ignore object files
+*.o
+
+# OS generated files
+.DS_Store

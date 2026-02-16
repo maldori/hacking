@@ -1,3 +1,7 @@
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <stdio.h>
 int main()
 {
   unsigned long linuxgate_start = 0xffffe000;

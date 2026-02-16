@@ -1,3 +1,4 @@
+#include <unistd.h>
 /*********************************************************\
 *      dissembler   ver. 0.9    *    File: dissembler.c   *
 ***********************************************************
@@ -22,6 +23,18 @@
 #include <time.h>
 #include <stdlib.h>
 #include <string.h>
+
+char *strfry(char *string) {
+    if (!string || !*string) return string;
+    size_t len = strlen(string);
+    for (size_t i = 0; i < len - 1; i++) {
+        size_t j = i + rand() % (len - i);
+        char t = string[j];
+        string[j] = string[i];
+        string[i] = t;
+    }
+    return string;
+}
 
 #define VERSION "0.9"
 #define CHR "%_01234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-"
@@ -215,7 +228,7 @@ freedom:
 			fprintf(fh, "P");
 	}
 	fprintf(fh,"\n");
-	if(fh != stdout) close(fh);
+	if(fh != stdout) fclose(fh);
 	free(mem-21);
 }
 

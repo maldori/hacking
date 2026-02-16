@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 #include <libnet.h>
 
 #define FLOOD_DELAY 5000 // delay between packet injects by 5000 ms 
