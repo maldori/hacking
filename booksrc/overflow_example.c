@@ -5,6 +5,11 @@ int main(int argc, char *argv[]) {
 	int value = 5;
 	char buffer_one[8], buffer_two[8];
 
+	if (argc < 2) {
+		printf("Usage: %s <string>\n", argv[0]);
+		return 1;
+	}
+
 	strcpy(buffer_one, "one"); /* put "one" into buffer_one */
 	strcpy(buffer_two, "two"); /* put "two" into buffer_two */
 	
